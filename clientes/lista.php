@@ -8,7 +8,7 @@
 <p>Aqui e lista de clientes</p>
 
 <script>
-    function enviarAcao<?=$md5?>(elemento) {
+    function enviaAcao<?=$md5?>(elemento) {
         // Lê o valor do atributo personalizado "acao"
         const acao = elemento.dataset.acao;
         // Envia via POST usando fetch
