@@ -14,7 +14,7 @@
     <div class="m-3">
         <div class="row">
             <div class="col-3">Menu</div>
-            <div class="col-9">Corpo do projeto</div>
+            <div class="col-9">Corpo do projeto, com novas atualizações</div>
         </div>
     </div>
 </body>
