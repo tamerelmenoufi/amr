@@ -9,6 +9,11 @@
     <title>ABU AMR</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <style>
+      li[data-acao]{
+        cursor:pointer
+      }
+    </style>
 </head>
 <body>
 
@@ -23,7 +28,7 @@
             <div class="col-2">
                 <h3>Menu</h3>
                 <ul class="list-group">
-                    <li class="list-group-item" data-acao="clientes">Client</li>
+                    <li  onclick="enviarAcao(this)" class="list-group-item" data-acao="clientes">Client</li>
                     <li class="list-group-item" data-acao="mensagem">Message</li>
                     <li class="list-group-item" data-acao="envios">Send WhatsApp</li>
                 </ul>
