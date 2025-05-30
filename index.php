@@ -28,9 +28,9 @@
             <div class="col-2">
                 <h3>Menu</h3>
                 <ul class="list-group">
-                    <li  onclick="enviarAcao(this)" class="list-group-item" data-acao="clientes">Client</li>
-                    <li class="list-group-item" data-acao="mensagem">Message</li>
-                    <li class="list-group-item" data-acao="envios">Send WhatsApp</li>
+                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="clientes">Client</li>
+                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="mensagem">Message</li>
+                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="envios">Send WhatsApp</li>
                 </ul>
             </div>
             <div class="col-10 corpo">Corpo do projeto, com novas atualizações</div>
