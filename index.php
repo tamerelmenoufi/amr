@@ -20,7 +20,14 @@
 
     <div class="m-3">
         <div class="row">
-            <div class="col-3">Menu</div>
+            <div class="col-3">
+                <h3>Menu</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Client</li>
+                    <li class="list-group-item">Message</li>
+                    <li class="list-group-item">Send WhatsApp</li>
+                </ul>
+            </div>
             <div class="col-9">Corpo do projeto, com novas atualizações</div>
         </div>
     </div>
