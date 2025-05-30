@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/amr/lib/includes.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
