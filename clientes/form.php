@@ -1,14 +1,13 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 
-    echo "{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php";
 ?>
 
 <div class="d-flex flex-row-reverse">
     <button onclick="enviaAcao<?=$md5?>(this)" acao="clientes/lista" type="button" class="btn btn-success">New</button>
 </div>
 <p>Aqui é o formulário de clientes</p>
-
+<?="{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php"?>
 <div class="m-1">
   <div class="mb-3">
     <label for="name" class="form-label">Name</label>
