@@ -1,5 +1,7 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
+
+    echo "{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php";
 ?>
 
 <div class="d-flex flex-row-reverse">
