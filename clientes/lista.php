@@ -1,5 +1,10 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
+
+    if($_POST['acao'] == 'salvar'){
+        print_r($_POST);
+    }
+
 ?>
 
 <div class="d-flex flex-row-reverse">
