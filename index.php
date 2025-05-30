@@ -20,16 +20,38 @@
 
     <div class="m-3">
         <div class="row">
-            <div class="col-3">
+            <div class="col-2">
                 <h3>Menu</h3>
                 <ul class="list-group">
-                    <li class="list-group-item">Client</li>
-                    <li class="list-group-item">Message</li>
-                    <li class="list-group-item">Send WhatsApp</li>
+                    <li class="list-group-item" data-acao="clientes">Client</li>
+                    <li class="list-group-item" data-acao="mensagem">Message</li>
+                    <li class="list-group-item" data-acao="envios">Send WhatsApp</li>
                 </ul>
             </div>
-            <div class="col-9">Corpo do projeto, com novas atualizações</div>
+            <div class="col-10 corpo">Corpo do projeto, com novas atualizações</div>
         </div>
     </div>
 </body>
-</html>    
+</html>
+<script>
+    function enviarAcao(elemento) {
+    // Lê o valor do atributo personalizado "acao"
+    const acao = elemento.dataset.acao;
+
+    // Envia via POST usando fetch
+    fetch(`${acao}.php`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded" // ou "application/json"
+      },
+      body: `acao=${encodeURIComponent(acao)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("resultado").innerHTML = data;
+    })
+    .catch(error => {
+      console.error("Erro no envio:", error);
+    });
+  }
+</script>
