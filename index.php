@@ -53,7 +53,7 @@
     })
     .then(response => response.text())
     .then(data => {
-      document.getElementById("resultado").innerHTML = data;
+      document.querySelector('.corpo').innerHTML = data;
     })
     .catch(error => {
       console.error("Erro no envio:", error);
