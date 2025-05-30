@@ -2,9 +2,10 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 ?>
 
-<div>
-    Aqui é a página de Mensagens
+<div class="d-flex flex-row-reverse">
+    <button onclick="enviaAcao<?=$md5?>(this)" acao="clientes/form" type="button" class="btn btn-success">New</button>
 </div>
+<p>Aqui e lista de clientes</p>
 
 <script>
     function enviarAcao<?=$md5?>(elemento) {

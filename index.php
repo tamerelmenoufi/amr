@@ -28,9 +28,9 @@
             <div class="col-2">
                 <h3>Menu</h3>
                 <ul class="list-group">
-                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="clientes">Client</li>
-                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="mensagem">Message</li>
-                    <li onclick="enviarAcao(this)" class="list-group-item" data-acao="envios">Send WhatsApp</li>
+                    <li onclick="enviaAcao<?=$md5?>(this)" class="list-group-item" data-acao="clientes/lista">Client</li>
+                    <li onclick="enviaAcao<?=$md5?>(this)" class="list-group-item" data-acao="mensagem">Message</li>
+                    <li onclick="enviaAcao<?=$md5?>(this)" class="list-group-item" data-acao="envios">Send WhatsApp</li>
                 </ul>
             </div>
             <div class="col-10 corpo">Corpo do projeto, com novas atualizações</div>
@@ -39,7 +39,7 @@
 </body>
 </html>
 <script>
-    function enviarAcao(elemento) {
+    function enviarAcao<?=$md5?>(elemento) {
     // Lê o valor do atributo personalizado "acao"
     const acao = elemento.dataset.acao;
     // Envia via POST usando fetch
