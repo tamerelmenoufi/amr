@@ -42,7 +42,7 @@
     function enviarAcao(elemento) {
     // Lê o valor do atributo personalizado "acao"
     const acao = elemento.dataset.acao;
-
+      console.log(acao)
     // Envia via POST usando fetch
     fetch(`${acao}.php`, {
       method: "POST",
