@@ -3,7 +3,7 @@
 ?>
 
 <div class="d-flex flex-row-reverse">
-    <button onclick="enviaAcao<?=$md5?>(this)" acao="clientes/form" type="button" class="btn btn-success">New</button>
+    <button onclick="enviaAcao<?=$md5?>(this)" data-acao="clientes/form" type="button" class="btn btn-success">New</button>
 </div>
 <p>Aqui e lista de clientes</p>
 
