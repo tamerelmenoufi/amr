@@ -8,5 +8,7 @@
     if($_POST){
         $query = "INSERT INTO logs_wapp set dados = '{$json}'";
         mysqli_query($con, $query);
+
+        file_put_contents('wh.txt', print_r($_POST, true)."\n\n\n".$json);
     }
 ?>
