@@ -5,6 +5,14 @@
         print_r($_POST);
     }
 
+    $query = "SELECT * FROM `logs_wapp` where dados->>'$.chat_type' = 'group' and dados->>'$.group_id' = '120363254840427713'";
+    $result = mysqli_query($con, $query);
+    
+    while($d = mysqi_fetch_object($result)){
+        echo $d->codigo."<br>";
+        ///////////////////////
+    }
+
 ?>
 
 <div class="d-flex flex-row-reverse">
