@@ -29,7 +29,7 @@ while($d = mysqli_fetch_object($result)){
         <tr>
             <td><?=$d->codigo?></td>
             <td><?=$d->tipo?></td>
-            <td><?=(($d->tipo == 'image') ? "<img src='{$d->mensagem}' />" : $d->mensagem)?></td>
+            <td><?=(($d->tipo == 'image') ? "<img src='data:image/png;base64,{$d->mensagem}' />" : $d->mensagem)?></td>
         </tr>
 <?php
     ///////////////////////
