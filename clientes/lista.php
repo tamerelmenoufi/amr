@@ -5,7 +5,7 @@
         print_r($_POST);
     }
 
-    $query = "SELECT *, dados->>'$.message_type' as tipo, dados->>'$.message_body' as mensagem FROM `logs_wapp` where dados->>'$.chat_type' = 'group'";
+    $query = "SELECT *, dados->>'$.message_type' as tipo, dados->>'$.message_body' as mensagem FROM `logs_wapp` where dados->>'$.message_type' in ('text', 'image') and dados->>'$.chat_type' = 'group'";
     $result = mysqli_query($con, $query);
     
 ?>
