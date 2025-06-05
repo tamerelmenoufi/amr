@@ -5,20 +5,40 @@
         print_r($_POST);
     }
 
-    echo $query = "SELECT * FROM `logs_wapp` where dados->>'$.chat_type' = 'group'";
+    $query = "SELECT *, dados->>'$.message_type' as tipo, dados->>'$.message_body' as mensagem FROM `logs_wapp` where dados->>'$.chat_type' = 'group'";
     $result = mysqli_query($con, $query);
     
-    while($d = mysqli_fetch_object($result)){
-        echo $d->codigo."<br>";
-        ///////////////////////
-    }
-
 ?>
 
 <div class="d-flex flex-row-reverse">
     <button onclick="enviaAcao<?=$md5?>(this)" data-acao="clientes/form" type="button" class="btn btn-success">New</button>
 </div>
-<p>Aqui e lista de clientes</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>tipo</th>
+            <th>Mensagem</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+while($d = mysqli_fetch_object($result)){
+?>
+        <tr>
+            <td><?=$d->codigo?></td>
+            <td><?=$d->tipo?></td>
+            <td><?=(($d->tipo == 'image') ? "<img src='{$d->mensagem}' />" : $d->mensagem)?></td>
+        </tr>
+<?php
+    ///////////////////////
+}
+
+?>
+    </tbody>
+</table>
+
 
 <script>
     function enviaAcao<?=$md5?>(elemento) {
