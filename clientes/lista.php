@@ -25,11 +25,17 @@
     <tbody>
 <?php
 while($d = mysqli_fetch_object($result)){
+
+    if($d->tipo == 'image'){
+        $mensagem = str_replace("\n",false, $d->mensagem);
+    }else{
+        $mensagem = $d->mensagem;
+    }
 ?>
         <tr>
             <td><?=$d->codigo?></td>
             <td><?=$d->tipo?></td>
-            <td><?=(($d->tipo == 'image') ? "<img src='data:image/png;base64,{$d->mensagem}' />" : $d->mensagem)?></td>
+            <td><?=(($d->tipo == 'image') ? "<img src='data:image/png;base64,{$mensagem}' />" : $mensagem)?></td>
         </tr>
 <?php
     ///////////////////////
