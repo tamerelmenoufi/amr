@@ -27,7 +27,9 @@
 while($d = mysqli_fetch_object($result)){
 
     if($d->tipo == 'image'){
-        $mensagem = str_replace('+', ' ', $d->mensagem);
+        $arq = base64_decode($d->mensagem);
+        $arq = str_replace('+', ' ', $arq);
+        $mensagem = base64_encode($arq);
     }else{
         $mensagem = $d->mensagem;
     }
