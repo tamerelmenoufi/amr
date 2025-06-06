@@ -35,7 +35,7 @@ while($d = mysqli_fetch_object($result)){
         <tr>
             <td><?=$d->codigo?></td>
             <td><?=$d->tipo?></td>
-            <td><?=(($d->tipo == 'image') ? "<img src='data:image/png;base64,{$mensagem}' />" : $mensagem)?></td>
+            <td><?=(($d->tipo == 'image') ? "<img src='data:image/jpeg;base64,{$mensagem}' />" : $mensagem)?></td>
         </tr>
 <?php
     ///////////////////////
