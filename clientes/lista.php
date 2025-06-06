@@ -27,7 +27,7 @@
 while($d = mysqli_fetch_object($result)){
 
     if($d->tipo == 'image'){
-        $mensagem = str_replace("+", " ", $d->mensagem);
+        $mensagem = str_replace('+', ' ', $d->mensagem);
     }else{
         $mensagem = $d->mensagem;
     }
