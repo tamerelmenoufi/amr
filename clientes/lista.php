@@ -27,7 +27,10 @@
 while($d = mysqli_fetch_object($result)){
 
     if($d->tipo == 'image'){
-        $mensagem = str_replace(["\n","\t\n","\n"],false, $d->mensagem);
+        $arq = base64_decode($d->mensagem);
+        $nome = md5($d->mensagem).".jpg";
+        file_put_contents($nome, $arq);
+        // $mensagem = str_replace(["\n","\t\n","\n"],false, $d->mensagem);
     }else{
         $mensagem = $d->mensagem;
     }
@@ -35,7 +38,7 @@ while($d = mysqli_fetch_object($result)){
         <tr>
             <td><?=$d->codigo?></td>
             <td><?=$d->tipo?></td>
-            <td><?=(($d->tipo == 'image') ? "<img src='data:image/png;base64,{$mensagem}' />" : $mensagem)?></td>
+            <td><?=(($d->tipo == 'image') ? "<img src='{$nome}' />" : $mensagem)?></td>
         </tr>
 <?php
     ///////////////////////
