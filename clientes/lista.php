@@ -6,6 +6,7 @@
     }
 
     $query = "SELECT *, dados->>'$.message_type' as tipo, dados->>'$.message_body' as mensagem FROM `logs_wapp` where dados->>'$.message_type' in ('text', 'image') and dados->>'$.chat_type' = 'group' order by codigo desc";
+    $query = "SELECT *, dados->>'$.message_type' as tipo, dados->>'$.message_body' as mensagem FROM `logs_wapp` where dados->>'$.message_type' in ('text', 'image') order by codigo desc";
     $result = mysqli_query($con, $query);
     
 ?>
